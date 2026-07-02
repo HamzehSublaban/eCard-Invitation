@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>دعوة حفل تخرج</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="capsLayer" aria-hidden="true"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<!-- ================= شاشة الترحيب ================= -->
+<section id="splash" aria-label="شاشة الترحيب">
+  <div class="verse-wrap" id="verseWrap">
+    <p class="verse gold-text">﴿ يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ ﴾</p>
+    <p class="verse-ref">— سورة المجادلة، الآية ١١ —</p>
+  </div>
+
+  <div class="scroll-stage">
+    <svg class="diploma" viewBox="0 0 300 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="شهادة تخرج ملفوفة بشريط ذهبي">
+      <defs>
+        <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#FBF3DE"/><stop offset=".5" stop-color="#EFE0BE"/><stop offset="1" stop-color="#D6C193"/>
+        </linearGradient>
+        <linearGradient id="paperShade" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#C4AC7C"/><stop offset=".15" stop-color="#F6ECD3"/>
+          <stop offset=".85" stop-color="#F6ECD3"/><stop offset="1" stop-color="#C4AC7C"/>
+        </linearGradient>
+        <linearGradient id="ribbon" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#F6DE9C"/><stop offset=".5" stop-color="#D4A438"/><stop offset="1" stop-color="#8F6B1E"/>
+        </linearGradient>
+        <radialGradient id="seal" cx="35%" cy="30%" r="80%">
+          <stop offset="0" stop-color="#7A3A2C"/><stop offset=".6" stop-color="#4A1F1B"/><stop offset="1" stop-color="#2C1210"/>
+        </radialGradient>
+      </defs>
+      <rect x="30" y="55" width="240" height="80" rx="40" fill="url(#paperShade)"/>
+      <ellipse cx="30" cy="95" rx="16" ry="40" fill="url(#paper)"/>
+      <ellipse cx="30" cy="95" rx="8" ry="26" fill="#B29B68"/>
+      <ellipse cx="270" cy="95" rx="16" ry="40" fill="url(#paper)"/>
+      <ellipse cx="270" cy="95" rx="8" ry="26" fill="#B29B68"/>
+      <rect x="128" y="48" width="44" height="94" rx="8" fill="url(#ribbon)"/>
+      <path d="M150 96 L118 150 L136 148 L150 168 L164 148 L182 150 Z" fill="url(#ribbon)" opacity=".95"/>
+      <circle cx="150" cy="96" r="17" fill="url(#ribbon)" stroke="#F6DE9C" stroke-width="2"/>
+      <circle cx="150" cy="96" r="12" fill="url(#seal)"/>
+      <path d="M150 89 l2.1 4.3 4.7.7 -3.4 3.3 .8 4.7 -4.2-2.2 -4.2 2.2 .8-4.7 -3.4-3.3 4.7-.7z" fill="#F6DE9C"/>
+      <rect x="60" y="62" width="52" height="6" rx="3" fill="#fff" opacity=".3"/>
+    </svg>
+  </div>
+
+  <button id="openBtn" type="button">✦ &nbsp;اضغط لمشاركتنا الفرحة&nbsp; ✦</button>
+  <p class="hint">دعوة خاصة بمناسبة التخرج</p>
+</section>
+
+<!-- ================= الدعوة الرئيسية ================= -->
+<main id="main" aria-label="دعوة حفل التخرج">
+
+  <div class="rv"><span class="eyebrow">دعــوة تــخــرج</span></div>
+
+  <h1 class="title rv"><span class="gold-text">حفل تخرجٍ يليق بفرحتنا</span></h1>
+  <p class="verse-mini rv">﴿ يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ ﴾</p>
+
+  <div class="divider rv"><span class="line"></span><span class="gem"></span><span class="line"></span></div>
+
+  <div class="invite-stage">
+    <!-- الشخصيات: أسلوب كرتوني مجسم لطيف -->
+    <div class="chars-row rv">
+
+      <!-- الخريج -->
+      <svg class="character char-float-a" viewBox="0 0 170 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="خريج بأسلوب كرتوني ثلاثي الأبعاد">
+        <defs>
+          <radialGradient id="skinB" cx="32%" cy="26%" r="90%">
+            <stop offset="0" stop-color="#FFDDBC"/><stop offset=".65" stop-color="#F1BE93"/><stop offset="1" stop-color="#D9A075"/>
+          </radialGradient>
+          <linearGradient id="gownBr" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#6B4326"/><stop offset=".55" stop-color="#4A2C16"/><stop offset="1" stop-color="#2E1A0C"/>
+          </linearGradient>
+          <linearGradient id="gownHi" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".14"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="capD" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3B2A1E"/><stop offset="1" stop-color="#170D07"/>
+          </linearGradient>
+          <linearGradient id="goldTrim" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#F6DE9C"/><stop offset=".55" stop-color="#D4A438"/><stop offset="1" stop-color="#9A751F"/>
+          </linearGradient>
+          <linearGradient id="paperWhite" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#FAF8F2"/><stop offset="1" stop-color="#E3DFD3"/>
+          </linearGradient>
+          <linearGradient id="paperWhiteEnd" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8E4D8"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="85" cy="238" rx="54" ry="10" fill="#000" opacity=".4"/>
+        <!-- الروب البني -->
+        <path d="M46 128 Q85 106 124 128 L140 218 Q85 236 30 218 Z" fill="url(#gownBr)"/>
+        <path d="M46 128 Q85 106 124 128 L140 218 Q85 236 30 218 Z" fill="url(#gownHi)"/>
+        <!-- الأكمام -->
+        <path d="M46 130 Q24 158 28 192 Q39 199 50 192 Q48 158 56 134 Z" fill="url(#gownBr)"/>
+        <!-- تطريز ذهبي على الكم الأيسر -->
+        <path d="M28 186 Q39 193 50 186" stroke="url(#goldTrim)" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <!-- الذراع المتحركة: يرمي القبعة للأعلى -->
+        <g class="toss-arm" style="transform-origin:120px 134px;">
+          <path d="M124 130 Q148 150 150 176 Q142 186 132 181 Q126 156 114 134 Z" fill="url(#gownBr)"/>
+          <path d="M132 180 Q142 186 149 177" stroke="url(#goldTrim)" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <circle cx="146" cy="172" r="7.5" fill="#F1BE93"/>
+          <g class="toss-cap" filter="drop-shadow(0 2px 3px rgba(0,0,0,.45))">
+            <rect x="128" y="153" width="36" height="12" rx="6" fill="url(#paperWhite)"/>
+            <ellipse cx="128" cy="159" rx="4.2" ry="6.4" fill="url(#paperWhiteEnd)"/>
+            <ellipse cx="128" cy="159" rx="2" ry="4" fill="#C9C3B2"/>
+            <ellipse cx="164" cy="159" rx="4.2" ry="6.4" fill="url(#paperWhiteEnd)"/>
+            <ellipse cx="164" cy="159" rx="2" ry="4" fill="#C9C3B2"/>
+            <rect x="142" y="150.5" width="8" height="17" rx="3" fill="url(#ribbon)"/>
+            <rect x="132" y="155" width="8" height="2" rx="1" fill="#fff" opacity=".8"/>
+          </g>
+        </g>
+        <!-- ياقة V ذهبية -->
+        <path d="M60 126 L85 168 L110 126 L100 120 L85 146 L70 120 Z" fill="url(#goldTrim)"/>
+        <!-- أزرار ذهبية -->
+        <circle cx="85" cy="182" r="3.6" fill="url(#goldTrim)"/>
+        <circle cx="85" cy="200" r="3.6" fill="url(#goldTrim)"/>
+        <!-- الرقبة -->
+        <rect x="76" y="104" width="18" height="16" rx="8" fill="#E8B287"/>
+        <!-- الرأس الكبير اللطيف -->
+        <circle cx="85" cy="76" r="33" fill="url(#skinB)"/>
+        <ellipse cx="70" cy="58" rx="14" ry="9" fill="#fff" opacity=".28"/>
+        <!-- الأذنان -->
+        <circle cx="52" cy="79" r="6" fill="#F1BE93"/><circle cx="118" cy="79" r="6" fill="#F1BE93"/>
+        <!-- الشعر -->
+        <path d="M52 70 Q54 40 85 39 Q116 40 118 70 Q114 52 85 50 Q56 52 52 70 Z" fill="#33210F"/>
+        <path d="M60 52 Q72 44 85 45" stroke="#4E361C" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
+        <!-- عيون كبيرة لامعة -->
+        <ellipse cx="72" cy="76" rx="5.2" ry="6.4" fill="#2A1708"/>
+        <ellipse cx="98" cy="76" rx="5.2" ry="6.4" fill="#2A1708"/>
+        <circle cx="74" cy="73.5" r="2" fill="#fff"/><circle cx="100" cy="73.5" r="2" fill="#fff"/>
+        <circle cx="70.5" cy="79" r="1" fill="#fff" opacity=".8"/><circle cx="96.5" cy="79" r="1" fill="#fff" opacity=".8"/>
+        <!-- حواجب -->
+        <path d="M65 66 Q72 62 79 65" stroke="#33210F" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+        <path d="M91 65 Q98 62 105 66" stroke="#33210F" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+        <!-- خدود وابتسامة -->
+        <ellipse cx="61" cy="87" rx="5.5" ry="3.6" fill="#F09A7C" opacity=".55"/>
+        <ellipse cx="109" cy="87" rx="5.5" ry="3.6" fill="#F09A7C" opacity=".55"/>
+        <path d="M75 92 Q85 100 95 92" stroke="#7A3A22" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- القبعة الداكنة -->
+        <path d="M68 44 h34 v10 a17 9 0 0 1 -34 0 Z" fill="url(#capD)"/>
+        <path d="M85 20 L136 40 L85 60 L34 40 Z" fill="url(#capD)"/>
+        <path d="M85 20 L136 40 L85 50 L34 40 Z" fill="#fff" opacity=".09"/>
+        <circle cx="85" cy="40" r="3.8" fill="url(#goldTrim)"/>
+        <path d="M85 40 Q112 44 116 66" stroke="#D4A438" stroke-width="2.6" fill="none"/>
+        <rect x="112" y="64" width="9" height="14" rx="2.5" fill="url(#goldTrim)"/>
+      </svg>
+
+      <!-- الخريجة -->
+      <svg class="character char-float-b" viewBox="0 0 170 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="خريجة بأسلوب كرتوني ثلاثي الأبعاد">
+        <defs>
+          <radialGradient id="skinG" cx="32%" cy="26%" r="90%">
+            <stop offset="0" stop-color="#FFE4C8"/><stop offset=".65" stop-color="#F5C9A2"/><stop offset="1" stop-color="#E0AC82"/>
+          </radialGradient>
+          <linearGradient id="hairG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5A3B22"/><stop offset="1" stop-color="#2E1B0D"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="85" cy="238" rx="54" ry="10" fill="#000" opacity=".4"/>
+        <!-- شعر طويل خلفي -->
+        <path d="M55 72 Q40 140 52 176 L68 168 L63 98 Z" fill="url(#hairG)"/>
+        <path d="M115 72 Q130 140 118 176 L102 168 L107 98 Z" fill="url(#hairG)"/>
+        <!-- الروب البني -->
+        <path d="M48 128 Q85 106 122 128 L138 218 Q85 236 32 218 Z" fill="url(#gownBr)"/>
+        <path d="M48 128 Q85 106 122 128 L138 218 Q85 236 32 218 Z" fill="url(#gownHi)"/>
+        <path d="M48 130 Q26 158 30 192 Q41 199 52 192 Q50 158 58 134 Z" fill="url(#gownBr)"/>
+        <path d="M30 186 Q41 193 52 186" stroke="url(#goldTrim)" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <!-- الذراع المتحركة: ترمي القبعة للأعلى -->
+        <g class="toss-arm" style="transform-origin:118px 134px;">
+          <path d="M122 130 Q146 150 148 176 Q140 186 130 181 Q124 156 112 134 Z" fill="url(#gownBr)"/>
+          <path d="M130 180 Q140 186 147 177" stroke="url(#goldTrim)" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <circle cx="144" cy="172" r="7.5" fill="#F5C9A2"/>
+          <g class="toss-cap" filter="drop-shadow(0 2px 3px rgba(0,0,0,.45))">
+            <rect x="126" y="153" width="36" height="12" rx="6" fill="url(#paperWhite)"/>
+            <ellipse cx="126" cy="159" rx="4.2" ry="6.4" fill="url(#paperWhiteEnd)"/>
+            <ellipse cx="126" cy="159" rx="2" ry="4" fill="#C9C3B2"/>
+            <ellipse cx="162" cy="159" rx="4.2" ry="6.4" fill="url(#paperWhiteEnd)"/>
+            <ellipse cx="162" cy="159" rx="2" ry="4" fill="#C9C3B2"/>
+            <rect x="140" y="150.5" width="8" height="17" rx="3" fill="url(#ribbon)"/>
+            <rect x="130" y="155" width="8" height="2" rx="1" fill="#fff" opacity=".8"/>
+          </g>
+        </g>
+        <path d="M62 126 L85 166 L108 126 L98 120 L85 144 L72 120 Z" fill="url(#goldTrim)"/>
+        <circle cx="85" cy="182" r="3.6" fill="url(#goldTrim)"/>
+        <circle cx="85" cy="200" r="3.6" fill="url(#goldTrim)"/>
+        <!-- الرقبة -->
+        <rect x="76" y="104" width="18" height="16" rx="8" fill="#EBB98F"/>
+        <!-- الرأس -->
+        <circle cx="85" cy="76" r="33" fill="url(#skinG)"/>
+        <ellipse cx="70" cy="58" rx="14" ry="9" fill="#fff" opacity=".3"/>
+        <circle cx="52" cy="82" r="5.5" fill="#F5C9A2"/><circle cx="118" cy="82" r="5.5" fill="#F5C9A2"/>
+        <!-- أقراط ذهبية -->
+        <circle cx="52" cy="89" r="2.6" fill="#D4A438"/><circle cx="118" cy="89" r="2.6" fill="#D4A438"/>
+        <!-- شعر أمامي بغرّة -->
+        <path d="M52 76 Q52 42 85 40 Q118 42 118 76 Q116 58 102 54 Q97 63 85 61 Q71 62 68 53 Q55 58 52 76 Z" fill="url(#hairG)"/>
+        <!-- عيون كبيرة برموش -->
+        <ellipse cx="72" cy="77" rx="5.2" ry="6.6" fill="#2A1708"/>
+        <ellipse cx="98" cy="77" rx="5.2" ry="6.6" fill="#2A1708"/>
+        <circle cx="74" cy="74" r="2" fill="#fff"/><circle cx="100" cy="74" r="2" fill="#fff"/>
+        <circle cx="70.5" cy="80" r="1" fill="#fff" opacity=".8"/><circle cx="96.5" cy="80" r="1" fill="#fff" opacity=".8"/>
+        <path d="M65 70 Q69 67 74 69" stroke="#2E1B0D" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M96 69 Q101 67 105 70" stroke="#2E1B0D" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <!-- خدود وابتسامة -->
+        <ellipse cx="61" cy="88" rx="5.5" ry="3.6" fill="#F08E7C" opacity=".6"/>
+        <ellipse cx="109" cy="88" rx="5.5" ry="3.6" fill="#F08E7C" opacity=".6"/>
+        <path d="M76 92 Q85 100 94 92" stroke="#9A4632" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- القبعة -->
+        <path d="M68 44 h34 v10 a17 9 0 0 1 -34 0 Z" fill="url(#capD)"/>
+        <path d="M85 20 L136 40 L85 60 L34 40 Z" fill="url(#capD)"/>
+        <path d="M85 20 L136 40 L85 50 L34 40 Z" fill="#fff" opacity=".09"/>
+        <circle cx="85" cy="40" r="3.8" fill="url(#goldTrim)"/>
+        <path d="M85 40 Q58 44 54 66" stroke="#D4A438" stroke-width="2.6" fill="none"/>
+        <rect x="49" y="64" width="9" height="14" rx="2.5" fill="url(#goldTrim)"/>
+        <!-- باقة ورد -->
+        <g>
+          <circle cx="30" cy="178" r="6.5" fill="#8C3A2C"/>
+          <circle cx="39" cy="171" r="6.5" fill="#C05A48"/>
+          <circle cx="23" cy="169" r="6.5" fill="#D4A438"/>
+          <circle cx="32" cy="166" r="5" fill="#F6DE9C"/>
+          <path d="M31 184 L33 204" stroke="#4C5B2E" stroke-width="3.4" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- بطاقة نص الدعوة -->
+    <div class="invite-card rv">
+      <p class="invite-text">
+        بمناسبة تخرج ابنَينا العزيزَين من الجامعة،<br>
+        <b>نتشرف بدعوتكم</b><br>
+        لحضور حفل تخرج<br>
+        <span class="grad-names gold-text">عمر و شهد</span><br>
+        ومشاركتنا هذه الفرحة الغالية
+      </p>
+      <div class="divider"><span class="line"></span><span class="gem"></span><span class="line"></span></div>
+      <p class="invite-sub">حضوركم شرفٌ لنا، ودعاؤكم أغلى الهدايا</p>
+    </div>
+  </div>
+
+  <!-- التفاصيل -->
+  <div class="details">
+    <div class="detail-card rv">
+      <div class="ic">
+        <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 16H5V10h14ZM5 8V6h14v2Z"/></svg>
+      </div>
+      <div>
+        <h3>التاريخ</h3>
+        <p>الجمعة ١٧ / ٧ / ٢٠٢٦</p>
+        <small>17 - 7 - 2026</small>
+      </div>
+    </div>
+
+    <div class="detail-card rv">
+      <div class="ic">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8Zm.5-13H11v6l5.2 3.1.8-1.3-4.5-2.7Z"/></svg>
+      </div>
+      <div>
+        <h3>الوقت</h3>
+        <p>من ٦:٠٠ مساءً</p>
+        <small>وحتى ٩:٠٠ مساءً</small>
+      </div>
+    </div>
+
+    <div class="detail-card rv">
+      <div class="ic">
+        <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z"/></svg>
+      </div>
+      <div>
+        <h3>المكان</h3>
+        <p>أبو نصير</p>
+        <small>ديوان عشيرة الشراونة</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- الخريطة -->
+  <div class="map-card rv">
+    <h2 class="gold-text">موقع الحفل</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.8167237168827!2d35.880743176135525!3d32.047151920926325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c9fe8436513b3%3A0x83653d90dd80ef3f!2z2K_ZitmI2KfZhiDYudi02YrYsdipINin2YTYtNix2KfZiNmG2Kk!5e0!3m2!1sen!2sjo!4v1783022046187!5m2!1sen!2sjo"
+      width="100%" height="250" style="border:0;border-radius:12px;"
+      allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+      title="خريطة موقع الحفل - ديوان عشيرة الشراونة">
+    </iframe>
+    <a class="btn-gold" href="https://www.google.com/maps/search/?api=1&query=%D8%AF%D9%8A%D9%88%D8%A7%D9%86+%D8%B9%D8%B4%D9%8A%D8%B1%D8%A9+%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D9%88%D9%86%D8%A9+%D8%A3%D8%A8%D9%88+%D9%86%D8%B5%D9%8A%D8%B1" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z"/></svg>
+      الانتقال إلى الموقع عبر خرائط Google
+    </a>
+  </div>
+
+  <p class="footer-note rv">ننتظر تشريفكم بفارغ الصبر ✨<br><span class="gold-text" style="font-weight:700;">وألف مبروك التخرج</span></p>
+</main>
+
+<!-- واتساب -->
+<a id="waBtn" href="#" rel="noopener" target="_blank" aria-label="تأكيد الحضور عبر الواتساب" style="visibility:hidden;">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35ZM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.82 9.82 0 0 1-1.51-5.26c0-5.44 4.43-9.86 9.89-9.86a9.8 9.8 0 0 1 6.99 2.9 9.8 9.8 0 0 1 2.89 6.98c0 5.44-4.43 9.87-9.88 9.87Zm8.4-18.27A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.49-8.4Z"/></svg>
+  <span>تأكيد الحضور عبر الواتساب</span>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="control.js"></script>
+</body>
+</html>
