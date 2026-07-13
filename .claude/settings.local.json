@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"^</style>$\\\\|^<style>$\" \"d:\\\\Projects\\\\Coding\\\\Graduation Invitation\\\\e_Card.html\")",
+      "PowerShell(Start-Process \"d:\\\\Projects\\\\Coding\\\\Graduation Invitation\\\\e_Card.html\")"
+    ]
+  }
+}
